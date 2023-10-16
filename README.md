@@ -4,16 +4,18 @@ Simple logfile watcher that sends a webhook when a new line is added to a file a
 
 ## Usage
 
+### Node.js
+
 ```bash
 FILENAME=/path/to/file.log && node index.js
 ```
 
 ### Docker
 
-1. Build the image
+1. (optional) Build the image by yourself or use the prebuilt image from Docker Hub
 
    ```bash
-   docker build -t log-webhook .
+   docker build -t hanshino/log-webhook .
    ```
 
 2. Run the image
@@ -24,7 +26,7 @@ FILENAME=/path/to/file.log && node index.js
      -v /path/to/config.json:/usr/app/src/dist/config.json \
      -e FILENAME=file.log \
      --name log-webhook \
-     log-webhook
+     hanshino/log-webhook
    ```
 
 ## Configuration
