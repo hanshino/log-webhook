@@ -1,0 +1,13 @@
+{
+  "webhook": {
+    "type": "discord",
+    "url": "https://discord.com/api/webhooks/1234567890/abcdefghijklmnopqrstuvwxyz"
+  },
+  "triggers": [
+    {
+      "regex": "PlayerJoinGame .* playerIndex\\((\\d+)\\)",
+      "message": "**Player {$1}** joined the game :rocket:",
+      "type": "info"
+    }
+  ]
+}
