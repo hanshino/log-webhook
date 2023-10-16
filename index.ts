@@ -48,6 +48,11 @@ function createWebhook(webhook: IConfig["webhook"]): IWebhook {
   }
 }
 
+/**
+ * Processes a single line of log and checks if it matches any of the triggers defined in the config.
+ * If a match is found, the corresponding message is added to the waitListMessages array.
+ * @param line - A single line of log to be processed.
+ */
 function processLine(line: string) {
   const { triggers } = config as IConfig;
 

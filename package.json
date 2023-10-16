@@ -7,6 +7,11 @@
     "name": "hanshino",
     "url": "https://github.com/hanshino"
   },
+  "scripts": {
+    "dev": "ts-node index.ts",
+    "build": "tsc",
+    "start": "yarn build && node dist/index.js"
+  },
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/lodash": "^4.14.199",
